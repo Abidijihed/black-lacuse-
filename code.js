@@ -29,7 +29,7 @@ const image = document.querySelector("img");
 var button2 = document.querySelector("#button2");
 var button1 = document.querySelector("#button1");
 
-window.onload = () => generateRandomPicture(imageArray[0]);
+window.onload = () => generateRandomPicture(imageArray);
 
 button2.addEventListener("click", () => generateRandomPicture(imageArray));
 button1.addEventListener("click", () => generateRandomPicture(imageArray));
@@ -37,8 +37,6 @@ function generateRandomPicture(array){
 	
   var randomNum = Math.floor(Math.random() * array.length); 
    image.setAttribute("src", array[randomNum]);
-
-
  
   for (var i = 0; i <imageArray.length; i++) {
   

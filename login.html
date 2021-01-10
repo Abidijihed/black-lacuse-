@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Jocker</title>
+<link rel="stylesheet" href="styl.css">
+<link rel="stylesheet" href="css/lightslider.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="js/lightslider.js"></script>
+ <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>	
+<section id="main">
+    <ul id="autoWidth" class="cs-hidden">
+        <li class="item-a">
+        <div class="showcase-box">
+            <img src="img/7cor.png">
+        </div> 
+      </li> 
+      <li class="item-b">
+        <div class="showcase-box">
+            <img src="img/AS.jpg" >
+        </div> 
+      </li> 
+      <li class="item-c">
+        <div class="showcase-box">
+            <img src="img/jock.jpg">
+        </div> 
+      </li> 
+      <li class="item-d">
+        <div class="showcase-box">
+            <img src="img/lg.jpg">
+        </div> 
+      </li> 
+      <li class="item-e">
+        <div class="showcase-box">
+            <img src="img/logo.jpg">
+        </div> 
+      </li>
+      <li class="item-f">
+        <div class="showcase-box">
+            <img src="img/7P.jpg">
+        </div> 
+      </li>
+      <li class="item-g">
+        <div class="showcase-box">
+            <img src="img/jk.jpg">
+        </div> 
+      </li> 
+      </ul>
+    </section>
+<body>
+<div class="login-box">
+<h1>Login</h1>
+<div class="textbox">
+<i class="fa fa-user" aria-hidden="true"></i>
+<input id="username"type="text"placeholder="Username">
+</div>
+
+<div class="textbox">
+<i class="fa fa-lock" aria-hidden="true"></i>
+<input id="password"type="password" placeholder="Password" >
+</div>
+
+<input class="btn" type="button" value="Login" onclick="validate()" >
+<div class="bottom-text" onclick="btnclicked()" >
+	Don't have account? <a href="#">
+	Sign up</a>
+</div>
+<script>
+            $(document).ready(function() {
+        $('#autoWidth').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function() {
+                $('#autoWidth').removeClass('cS-hidden');
+            } 
+        });  
+      });
+    </script>
+
+<script>
+          	function btnclicked(){
+          		document.location.href="https://mail.google.com/mail/u/0/#inbox";
+          	}
+          </script>
+</div>
+</form>
+<script src="code.js"></script>
+</body>
+</html>
