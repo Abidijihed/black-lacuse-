@@ -5,12 +5,15 @@ font-family: sans-serif;
 background: url(table.jpg) no-repeat ;
 background-size: cover;
 }
-.flex
+.jihed
 {
+   display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   -webkit-box-reflect:below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
 }
-.flex span
+.jihed span
 {
 position: relative;
 display: inline-block;
@@ -127,28 +130,25 @@ input[type=text]:focus{
   margin-top:17%;
 }
   #button2{
-  float: left;
-  width:180px;
-  height: 50px;
+   float: left;
+   background: white;
+  position: relative;
+  display: inline-block;
+  padding: 15px 45px;
+  color: red;
+  text-transform: uppercase;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#button2:hover{
+  color: #255784;
   background: red;
-  border: 2px solid white;
-  color: white;
-  margin-left: 0%;
-  font-size: 20px;
-  cursor: pointer;
-  
-
+  box-shadow: 0 0 10px red, 0 0 40px red, 0 0 80px red;
+  transition-delay: 1s;
+  margin-top:17%;
 }
   #button1{
- /* float: left;
-  width: 180px;
-  height: 50px;
-  background: black;
-  border: 2px solid white;
-  color: white;
-  margin-left:  0%;
-  font-size: 20px;
-  cursor: pointer;*/
    float: left;
    background: white;
   position: relative;
@@ -162,9 +162,9 @@ input[type=text]:focus{
  
 }
 #button1:hover{
-  color: black;
-  background: #2196f3;
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  color: #255784;
+  background: black;
+  box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
   transition-delay: 0.5s;
   margin-top:17%;
 }
@@ -187,10 +187,5 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-}
-.test{
-  position : relative;
-  text-align: center;
-
+ 
 }
