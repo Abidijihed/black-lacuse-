@@ -1,30 +1,34 @@
  
- var mony1=110;
+ var mony1=0;
   var mony= $("#text");
 var imageArray = [
-       "img/7cor.png",
-       "img/9.jpg",
-       "img/8trfl.png",
-       "img/AS.jpg",
-       "img/10_carreau.gif",
-       "img/asCa.jpg",
-       "img/J.jpg",
-       "img/King.png",
-       "img/JTR.png",
-       "img/jock.jpg",
-       "img/j9alb.jpg",
-       "img/quenn.jpg",
-       "img/AStr.jpg",
-       "img/4C.png",
-       "img/4p.png",
-       "img/7C.jpg",
-       "img/7P.jpg",
-       "img/10H.png",
-       "img/10p.jpg",
-       "img/jk.jpg",
-       "img/Qc.jpg",
-       "img/qC.png",
-       "img/kp.png"
+        // {name:"kkk",color:"blue",image:"img/download.png"},
+        {name:"ASh",color:"red",image:"img/ASh.jpg"},
+        {name:"cor",color:"red",image:"img/7cor.png"},
+        {name:"tref",color:"black",image:"img/9.jpg"},
+        {name:"tr",color:"black",image:"img/8trfl.png"},
+        {name:"AS",color:"black",image:"img/AS.jpg"},
+        {name:"10_carreau",color:"red",image:"img/10_carreau.jpg"},
+        {name:"asCa",color:"red",image:"img/asCa.jpg"},
+        {name:"J",color:"black",image:"img/J.jpg"},
+        {name:"King",color:"black",image:"img/KT.jpg"},
+        {name:"JTR",color:"black",image:"img/JTR.png"},
+        {name:"jock",color:"black",image:"img/jock.jpg"},
+        {name:"j9alb",color:"red",image:"img/j9alb.jpg"},
+        {name:"quenn",color:"red",image:"img/quenn.jpg"},
+        {name:"AStr",color:"black",image:"img/AStr.jpg"},
+        {name:"4C",color:"red",image:"img/4C.png"},
+        {name:"4p",color:"black",image:"img/4p.png"},
+        {name:"9C",color:"red",image:"img/9C.jpg"},
+        {name:"7C",color:"red",image:"img/7C.jpg"},
+        {name:"10H",color:"red",image:"img/10H.png"},
+        {name:"10p",color:"black",image:"img/10p.jpg"},
+        {name:"jk",color:"red",image:"img/jk.jpg"},
+        {name:"Qc",color:"red",image:"img/Qc.jpg"},
+        {name:"Qh",color:"red",image:"img/Qh.jpg"},
+        {name:"kp",color:"black",image:"img/kp.jpg"},
+         {name:"KC",color:"red",image:"img/KC.jpg"},
+         {name:"Kh",color:"red",image:"img/Kh.jpg"}
 ];
 var ammount1= document.getElementById("ammount1")
 var text=document.getElementById("text")
@@ -37,37 +41,59 @@ Withdraw.addEventListener("click",function(){
 const image = document.querySelector("img");
 var button2 = document.querySelector("#button2");
 var button1 = document.querySelector("#button1");
- window.onload = () => generateRandomPicture(imageArray);
-button2.addEventListener("click", () => generateRandomPicture(imageArray));
+ window.onload = () =>generateRandomPicture(imageArray);
 
 button1.addEventListener("click", () => generateRandomPicture(imageArray));
- var randomNum=0
+button2.addEventListener("click", () => generateRandomPicture(imageArray));
+
 function generateRandomPicture(array){
-  
+  console.log(array[2].image)
   var randomNum = Math.floor(Math.random() * array.length); 
-   image.setAttribute("src", array[randomNum]);
- var i=0
-  while (mony1!==0 && i<array.length){
+   image.setAttribute("src", array[randomNum].image);
+ var i=0 
+ // while(i<array.length && mony1!==0){
+ //  if (array[randomNum].color!=="red" ){
+ //    mony1=mony1-5
+ //  mony.text(mony1)
+ //  }
   
-  if(i===Math.floor(randomNum/2)){
+ // }
+ // alert ( "you don't have money")
+ 
+
+  if(array[randomNum].color==="red"){
+    console.log (array[randomNum])
     mony1=mony1+40
 mony.text(mony1)
-    //text.innerHTML=mony1+40
-    alert ("you guess");
+    alert ("you guess "+40+" $");
   }
-  else{
-    mony1=mony1-5
+// if(array[randomNum].color==="black"){
+//   // alert ("you guess "+mony1+ " $")
+// }
+  if(array[randomNum].color!=="red") {
+    mony1=mony1-10
     mony.text(mony1)
-    //text.innerHTML=mony1-10
-    return ("repeat again")
+    
+    alert (" you lost repeat again you can win")
   }
-i++
-  }
+if (mony1===0){
    alert("your don't have enough money")
 }
 
-var ammount = document.getElementById("ammount")
 
+// function generateRandomPicture(array){
+//   console.log(array[2].image)
+//   var randomNum = Math.floor(Math.random() * array.length); 
+//    image.setAttribute("src", array[randomNum].image);
+//  var i=0 
+//   if(array[randomNum].color==="black"){
+//     console.log (array[randomNum])
+//     mony1=mony1+40
+//     mony.text(mony1)
+//     alert ("you guess "+30+" $");
+//   }
+}
+var ammount = document.getElementById("ammount")
 var text=document.getElementById("text")
 var Diposit=document.getElementById("Diposit")
 Diposit.addEventListener("click",function(){
