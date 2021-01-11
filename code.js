@@ -1,8 +1,7 @@
- // $(document).ready(function(){
- var mony1=0;
-  var mony= $("#text");
+
+var mony1=0;
+var mony= $("#text");
 var imageArray = [
-         // {name:"kkk",color:"blue",image:"img/download.png"},
         {name:"ASh",color:"red",image:"img/ASh.jpg"},
         {name:"cor",color:"red",image:"img/7cor.png"},
         {name:"tref",color:"black",image:"img/9.jpg"},
@@ -27,15 +26,14 @@ var imageArray = [
         {name:"Qc",color:"red",image:"img/Qc.jpg"},
         {name:"Qh",color:"red",image:"img/Qh.jpg"},
         {name:"kp",color:"black",image:"img/kp.jpg"},
-         {name:"KC",color:"red",image:"img/KC.jpg"},
-         {name:"Kh",color:"red",image:"img/Kh.jpg"}
+        {name:"KC",color:"red",image:"img/KC.jpg"},
+        {name:"Kh",color:"red",image:"img/Kh.jpg"}
 ];
 var ammount1= document.getElementById("ammount1")
 var text=document.getElementById("text")
 var Withdraw=document.getElementById("Withdraw")
 Withdraw.addEventListener("click",function(){
       mony.text(mony1-=(ammount1.value-""))
-
 })
 
 const image = document.querySelector("#imgfloat");
@@ -50,12 +48,13 @@ function generateRandomPicture(array){
   console.log(array[2].image)
   var randomNum = Math.floor(Math.random() * array.length); 
    image.setAttribute("src", array[randomNum].image);
- var i=0 
+
   if(array[randomNum].color==="red"){
     console.log (array[randomNum])
-    mony1=mony1+40
-mony.text(mony1)
-      alert ("you guess "+40+" $");
+    mony1=mony1+20
+    mony.text(mony1)
+      
+     alert("you guess "+20+" $");
 
   }
   else if(array[randomNum].color!=="red" && mony1 >10) {
@@ -64,7 +63,7 @@ mony.text(mony1)
     
     alert (" you lost repeat again you can win")
   }
-  
+
 else if (mony1===0){
    alert("your don't have enough money")
 }

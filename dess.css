@@ -5,14 +5,79 @@ font-family: sans-serif;
 background: url(table.jpg) no-repeat ;
 background-size: cover;
 }
+.flex
+{
+  position: relative;
+  -webkit-box-reflect:below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+}
+.flex span
+{
+position: relative;
+display: inline-block;
+color: black;
+font-size: 2em;
+text-transform: uppercase;
+animation: animate 1s ease-in-out infinite;
+animation-delay: calc(0.1s * var(--i))
+}
+@keyframes animate 
+{
+  0%
+  {
+    transform: translateY(0px);
+  }
+  20%
+  {
+    transform: translateY(-20px);
+  }
+
+ 40%,100%
+  {
+    transform: translateY(0px);
+  }
+}
+#Diposit{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#Diposit:hover{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+  margin-top:17%;
+}
+#Withdraw{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.5s;
+  
+}
+#Withdraw:hover{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+  margin-top: 17%;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333bd;
-  margin-bottom: 20px;
-  height: 70px;
+  background-color: black;
 }
 
 li {
@@ -26,127 +91,106 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
-li a:hover:not(.active) {
-  background-color: #111;
+input[type=text]{
+  width: 100%;
+  border:2px solid #aaa;
+  border-radius: 4px;
+  margin-top: 18%;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 3s;
 }
-
-.active {
-  background-color: #4CAF50;
+input[type=text]:focus{
+  border-color:dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue; 
 }
-
-
-
+#k{
+   float: left;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.topnav-right {
+  float: right;
+}
+#k:hover{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+  margin-top:17%;
+}
   #button2{
- width: 10%;
+  float: left;
+  width:180px;
+  height: 50px;
   background: red;
   border: 2px solid white;
   color: white;
-  padding: 10px;
+  margin-left: 0%;
   font-size: 20px;
   cursor: pointer;
-   margin-bottom: 100px 0;
+  
 
 }
   #button1{
-  width: 10%;
+ /* float: left;
+  width: 180px;
+  height: 50px;
   background: black;
   border: 2px solid white;
   color: white;
-  padding: 10px;
+  margin-left:  0%;
   font-size: 20px;
-  cursor: pointer;
-  margin-bottom: 100px 0;
+  cursor: pointer;*/
+   float: left;
+   background: white;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: black;
+  text-transform: uppercase;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.1s;
  
 }
-
+#button1:hover{
+  color: black;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 0.5s;
+  margin-top:17%;
+}
 header {
   width: 100%;
-  padding-bottom: 0px;
+  padding-bottom: 25px;
   flex-direction: column;
-  padding: 0%;
-
 }
 
- .flex img{
-   width: 350px;
-    height: 400px;
+img {
+   width: 390px;
+    height: 450px;
     box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
     border-radius: 10px;
     margin: 0px 20px 10px 20px;
     overflow: hidden;
-
 }
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: red;
+  color: black;
 }
 .test{
   position : relative;
   text-align: center;
 
-}
-#ammount{
-    font-size:20px; 
-    margin: 20px;
-    width: 100px;
-    height: 20px;
-    border: none;
-    outline: none;
-    background-color:rgba(245,245,245,0.8) 
-
-}
-#ammount input{
-  border: none;
-  outline: none;
- background: none;
-  color: black;
-  font-size: 20px;
-  width: 80%;
-  float: left;
-  margin:  0px;
-}
-#ammount1{ 
-  font-size:20px;
-    margin: 20px;
-    width: 100px;
-    height: 20px;
-    border: none;
-    outline: none;
-    background-color:rgba(245,245,245,0.8) 
-}
-#ammount1 input{
-  border: none;
-  outline: none;
- background: none;
-  color: black;
-  font-size: 20px;
-  width: 80%;
-  float: left;
-  margin:  0px;
-}
-#k{
- margin-left: 300%;
- font-size:20px;
-}
-#Diposit{
- font-size: 20px;
- margin:10px 0px;
-}
-#Withdraw{
-  margin:10px 0px;
-  font-size: 20px;
-}
-#lgg {
-    padding: 0px;
-    width: 160px;
-    height: 74px;
-    
-}
-
-#lgg:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }

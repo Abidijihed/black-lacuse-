@@ -6,42 +6,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
   </head>
-  <body>
-    <section id="main">
-      
-  	<ul>
-      
-  <li ><img id="lgg"  src="img/lgg.jpg"></li>
-  <li><input type="text" name="amout"  id="ammount"></input></li>
+<body>
+    <section id="main">  
+<ul>  
+  <li><input type="text" placeholder="Yor Diposit" id="ammount"></input></li>
   <li><a id="Diposit" href="#">Deposit</a></li>
-  <li><input type="text" name="amout"  id="ammount1"></input></li>
+  <li><input type="text" placeholder="Amount"  id="ammount1"></input></li>
   <li><a id="Withdraw" href="#">Withdraw</a></li>
-
-  <li><a id="k" >my money:<span id="text">0</span>$</a></li>
-
-
+  <div class="topnav-right">
+  <li><a id="k"  href="#" >My Amount:<span id="text">0</span>$</a></li>
+</div>
 </ul>
 </section>
-    <header class="flex">
-      <h1>Guess your card!and win </h1>
-       </header>
+    <div class="flex">
+      <h1>
+        <span style="--i:1;">G</span>
+        <span style="--i:2;">u</span>
+        <span style="--i:3;">e</span>
+        <span style="--i:4;">s</span>
+        <span style="--i:5;">s</span>
+        <span style="--i:6;">y</span>
+        <span style="--i:7;">o</span>
+        <span style="--i:8;">u</span>
+        <span style="--i:9;">r</span>
+        <span style="--i:10;">c</span>
+        <span style="--i:11;">a</span>
+        <span style="--i:12;">r</span>
+        <span style="--i:13;">d</span>
+    </h1>
+       </div>
      
      
     <section class="flex">
+       <button id="button2">Red</button>
       <img  id="imgfloat"src="img/download.png">
-
-    </section>
-       <div class="test">
-      <button id="button2">Red</button>
+           <div class="test">
       <button id="button1"> black</button>
       </div>
-      <script>
+      </section>
+
+   <!--    <script>
       $(document).ready(function(){
-      $(".test").click(function(){
+      $("#button2","#button1").click(function(){
   $(this).toggleClass('flipped');
 });
  })  
-</script>
+</script> -->
     <script src="code.js"></script>
   </body>
 </html>
