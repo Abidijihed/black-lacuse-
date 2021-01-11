@@ -80,9 +80,60 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: red;
 }
 .test{
   position : relative;
   text-align: center;
 
+}
+#ammount{
+    font-size:20px; 
+    margin: 20px;
+    width: 100px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background-color:rgba(245,245,245,0.8) 
+}
+#ammount input{
+  border: none;
+  outline: none;
+ background: none;
+  color: black;
+  font-size: 20px;
+  width: 80%;
+  float: left;
+  margin:  0px;
+}
+#ammount1{ 
+  font-size:20px;
+    margin: 20px;
+    width: 100px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background-color:rgba(245,245,245,0.8) 
+}
+#ammount1 input{
+  border: none;
+  outline: none;
+ background: none;
+  color: black;
+  font-size: 20px;
+  width: 80%;
+  float: left;
+  margin:  0px;
+}
+#k{
+ margin-left: 315%;
+ font-size:20px;
+}
+#Diposit{
+ font-size: 20px;
+ margin:10px 0px;
+}
+#Withdraw{
+  margin:10px 0px;
+  font-size: 20px;
 }
