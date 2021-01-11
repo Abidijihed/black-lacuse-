@@ -10,13 +10,15 @@
     <section id="main">
       
   	<ul>
-  <li><a class="active" href="#home">Home </a></li>
+      
+  <li ><img id="lgg"  src="img/lgg.jpg"></li>
   <li><input type="text" name="amout"  id="ammount"></input></li>
   <li><a id="Diposit" href="#">Deposit</a></li>
   <li><input type="text" name="amout"  id="ammount1"></input></li>
   <li><a id="Withdraw" href="#">Withdraw</a></li>
 
-  <li><a id="k" >your money:<span id="text">0</span>$</a></li>
+  <li><a id="k" >my money:<span id="text">0</span>$</a></li>
+
 
 </ul>
 </section>
@@ -26,14 +28,20 @@
      
      
     <section class="flex">
-      <img src="">
+      <img  id="imgfloat"src="img/download.png">
 
     </section>
        <div class="test">
       <button id="button2">Red</button>
       <button id="button1"> black</button>
       </div>
-   
+      <script>
+      $(document).ready(function(){
+      $(".test").click(function(){
+  $(this).toggleClass('flipped');
+});
+ })  
+</script>
     <script src="code.js"></script>
   </body>
 </html>

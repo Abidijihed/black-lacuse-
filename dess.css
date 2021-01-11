@@ -10,7 +10,9 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #333333bd;
+  margin-bottom: 20px;
+  height: 70px;
 }
 
 li {
@@ -38,42 +40,42 @@ li a:hover:not(.active) {
   #button2{
  width: 10%;
   background: red;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
-   margin: 12px 0;
+   margin-bottom: 100px 0;
 
 }
   #button1{
   width: 10%;
   background: black;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
-  margin: 12px 0;
+  margin-bottom: 100px 0;
  
 }
 
-
-
-}
 header {
   width: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 0px;
   flex-direction: column;
+  padding: 0%;
+
 }
 
-img {
+ .flex img{
    width: 350px;
     height: 400px;
     box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
     border-radius: 10px;
     margin: 0px 20px 10px 20px;
     overflow: hidden;
+
 }
 
 .flex {
@@ -95,6 +97,7 @@ img {
     border: none;
     outline: none;
     background-color:rgba(245,245,245,0.8) 
+
 }
 #ammount input{
   border: none;
@@ -126,7 +129,7 @@ img {
   margin:  0px;
 }
 #k{
- margin-left: 315%;
+ margin-left: 300%;
  font-size:20px;
 }
 #Diposit{
@@ -136,4 +139,14 @@ img {
 #Withdraw{
   margin:10px 0px;
   font-size: 20px;
+}
+#lgg {
+    padding: 0px;
+    width: 160px;
+    height: 74px;
+    
+}
+
+#lgg:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }

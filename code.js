@@ -1,8 +1,8 @@
- 
+ // $(document).ready(function(){
  var mony1=0;
   var mony= $("#text");
 var imageArray = [
-        // {name:"kkk",color:"blue",image:"img/download.png"},
+         // {name:"kkk",color:"blue",image:"img/download.png"},
         {name:"ASh",color:"red",image:"img/ASh.jpg"},
         {name:"cor",color:"red",image:"img/7cor.png"},
         {name:"tref",color:"black",image:"img/9.jpg"},
@@ -38,12 +38,12 @@ Withdraw.addEventListener("click",function(){
 
 })
 
-const image = document.querySelector("img");
+const image = document.querySelector("#imgfloat");
 var button2 = document.querySelector("#button2");
 var button1 = document.querySelector("#button1");
- window.onload = () =>generateRandomPicture(imageArray);
+ // window.onload = () =>generateRandomPicture(imageArray);
 
-button1.addEventListener("click", () => generateRandomPicture(imageArray));
+button1.addEventListener("click", () => generateRandomPicture2(imageArray));
 button2.addEventListener("click", () => generateRandomPicture(imageArray));
 
 function generateRandomPicture(array){
@@ -51,47 +51,43 @@ function generateRandomPicture(array){
   var randomNum = Math.floor(Math.random() * array.length); 
    image.setAttribute("src", array[randomNum].image);
  var i=0 
- // while(i<array.length && mony1!==0){
- //  if (array[randomNum].color!=="red" ){
- //    mony1=mony1-5
- //  mony.text(mony1)
- //  }
-  
- // }
- // alert ( "you don't have money")
- 
-
   if(array[randomNum].color==="red"){
     console.log (array[randomNum])
     mony1=mony1+40
 mony.text(mony1)
-    alert ("you guess "+40+" $");
+      alert ("you guess "+40+" $");
+
   }
-// if(array[randomNum].color==="black"){
-//   // alert ("you guess "+mony1+ " $")
-// }
-  if(array[randomNum].color!=="red") {
+  else if(array[randomNum].color!=="red" && mony1 >10) {
     mony1=mony1-10
     mony.text(mony1)
     
     alert (" you lost repeat again you can win")
   }
-if (mony1===0){
+  
+else if (mony1===0){
    alert("your don't have enough money")
 }
-
-
-// function generateRandomPicture(array){
-//   console.log(array[2].image)
-//   var randomNum = Math.floor(Math.random() * array.length); 
-//    image.setAttribute("src", array[randomNum].image);
-//  var i=0 
-//   if(array[randomNum].color==="black"){
-//     console.log (array[randomNum])
-//     mony1=mony1+40
-//     mony.text(mony1)
-//     alert ("you guess "+30+" $");
-//   }
+}
+function generateRandomPicture2(array){
+  console.log(array[2].image)
+  var randomNum = Math.floor(Math.random() * array.length); 
+   image.setAttribute("src", array[randomNum].image);
+  if(array[randomNum].color=="black"){
+    console.log (array[randomNum])
+    mony1=mony1+20
+mony.text(mony1)
+    alert ("you guess "+20+" $");
+  }
+  else if(array[randomNum].color!=="black" && mony1 >10) {
+    mony1=mony1-10
+    mony.text(mony1)
+    
+    alert (" you lost repeat again you can win")
+  }
+else if (mony1===0){
+   alert("your don't have enough money")
+}
 }
 var ammount = document.getElementById("ammount")
 var text=document.getElementById("text")
@@ -117,7 +113,6 @@ function validate(){typeof
 
    
 
-   
-    
+ 
     
   
